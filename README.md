@@ -32,3 +32,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Resources
+
+- Course notes: https://tinted-gym-f99.notion.site/Fullstack-course-notes-Students-3202660c315b438aba6c1ae051963572
+- Course repo: https://github.com/Hendrixer/fullstack-music
+- Chakra UI: https://chakra-ui.com
+- Prisma: https://www.prisma.io
+- Heroku: https://id.heroku.com
+
+## Prisma
+
+- `npx prisma db push` for updating the database
