@@ -40,6 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Chakra UI: https://chakra-ui.com
 - Prisma: https://www.prisma.io
 - Heroku: https://id.heroku.com
+- NextJS middlewares: https://nextjs.org/docs/advanced-features/middleware
 
 ## Prisma
 
