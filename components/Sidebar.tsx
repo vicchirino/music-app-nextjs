@@ -27,9 +27,9 @@ type MenuItem = {
   route: string
 }
 
-const playlists = new Array(30).fill(1).map((_, i) => {
-  return { name: `Playlist ${i + 1}`, id: i + 1 }
-})
+// const playlists = new Array(30).fill(1).map((_, i) => {
+//   return { name: `Playlist ${i + 1}`, id: i + 1 }
+// })
 
 const navMenu: MenuItem[] = [
   {
@@ -82,7 +82,7 @@ const MenuItem = ({ menuList }) => {
 }
 
 const Sidebar = () => {
-  // const { playlists } = usePlaylist()
+  const { playlists } = usePlaylist()
   return (
     <Box
       width="100%"
@@ -106,7 +106,13 @@ const Sidebar = () => {
             {playlists.map(playlist => (
               <ListItem paddingX="20px" key={playlist.id}>
                 <LinkBox>
-                  {/* <NextLink href="/" passHref /> */}
+                  <NextLink
+                    href={{
+                      pathname: "/playlist/[id]",
+                      query: { id: playlist.id },
+                    }}
+                    passHref
+                  />
                   <LinkOverlay>{playlist.name}</LinkOverlay>
                 </LinkBox>
               </ListItem>

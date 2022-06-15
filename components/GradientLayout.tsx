@@ -1,4 +1,6 @@
 import { Box, Flex, Text, Image, color } from "@chakra-ui/react"
+import React, { ReactNode } from "react"
+import prisma from "../lib/prisma"
 
 const GradientLayout: React.FC<{
   color: string
@@ -7,7 +9,16 @@ const GradientLayout: React.FC<{
   subtitle?: string
   description?: string
   roundImage?: boolean
-}> = ({ color, image, title, subtitle, description, roundImage = false }) => {
+  children: ReactNode
+}> = ({
+  children,
+  color,
+  image,
+  title,
+  subtitle,
+  description,
+  roundImage = false,
+}) => {
   return (
     <Box
       height="100%"
@@ -33,6 +44,7 @@ const GradientLayout: React.FC<{
           </Text>
         </Box>
       </Flex>
+      <Box paddingY={20}>{children}</Box>
     </Box>
   )
 }

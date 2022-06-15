@@ -6,7 +6,7 @@ import { NextApiRequest, NextApiResponse } from "next"
 
 export default async function login(req: NextApiRequest, res: NextApiResponse) {
   const salt = bcrypt.genSaltSync()
-  const { email, password } = req.body
+  const { email, password } = JSON.parse(req.body)
   let user
 
   try {
@@ -14,7 +14,7 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
       data: {
         email,
         password: bcrypt.hashSync(password, salt),
-        firstName: "Test-1 asd ",
+        firstName: "Test-1 asd",
         lastName: "Test-2 asd ",
       },
     })

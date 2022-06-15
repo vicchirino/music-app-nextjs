@@ -8,11 +8,11 @@ export default async function signin(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { email, password } = req.body
+  const { email, password } = JSON.parse(req.body)
 
   const user = await prisma.user.findUnique({
     where: {
-      email: email,
+      email: email, // email
     },
   })
 

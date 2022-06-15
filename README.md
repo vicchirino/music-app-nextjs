@@ -45,3 +45,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Prisma
 
 - `npx prisma db push` for updating the database
+- `npx prisma migrate reset` for reseting the database
